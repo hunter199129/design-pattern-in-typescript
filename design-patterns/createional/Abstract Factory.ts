@@ -1,5 +1,3 @@
-import { workerData } from "worker_threads"
-
 interface IDoor {
   getDescription(): void
 }
@@ -37,7 +35,7 @@ interface IDoorFactory {
   makeFittingExpert(): IDoorFittingExpert
 }
 
-class WoodenDoorFactory implements IDoorFactory {
+export class WoodenDoorFactory implements IDoorFactory {
   makeDoor = () => {
     return new WoodenDoor()
   }
@@ -46,30 +44,11 @@ class WoodenDoorFactory implements IDoorFactory {
   }
 }
 
-class IronDoorFactory implements IDoorFactory {
+export class IronDoorFactory implements IDoorFactory {
   makeDoor = () => {
     return new IronDoor()
   }
   makeFittingExpert = () => {
     return new Welder()
   }
-}
-
-export default function abstractFactorySample() {
-  let woodenFactory = new WoodenDoorFactory()
-
-  let door = woodenFactory.makeDoor()
-  let expert = woodenFactory.makeFittingExpert()
-
-  door.getDescription()
-  expert.getDescription()
-
-  let ironFactory = new WoodenDoorFactory()
-
-  door = woodenFactory.makeDoor()
-  expert = woodenFactory.makeFittingExpert()
-
-  door.getDescription()
-  expert.getDescription()
-
 }

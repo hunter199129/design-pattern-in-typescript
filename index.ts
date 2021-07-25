@@ -1,11 +1,11 @@
-import AdapterSample from "./design-patterns/behavioral/Adapter";
-import bridge from "./design-patterns/behavioral/Bridge";
-import abstractFactorySample from "./design-patterns/createional/Abstract Factory";
-import BuilderSample from "./design-patterns/createional/Builder";
-import factoryMethodSample from "./design-patterns/createional/Factory Method";
-import PrototypeSample from "./design-patterns/createional/Prototype";
-import simpleFactorySample from "./design-patterns/createional/Simple Factory";
-import SingletonSample from "./design-patterns/createional/Singleton";
+import AdapterSample from "./design-patterns/Structural/Adapter";
+import bridge from "./design-patterns/Structural/Bridge";
+import abstractFactorySample from "./design-patterns/Createional/Abstract Factory";
+import BuilderSample from "./design-patterns/Createional/Builder";
+import factoryMethodSample from "./design-patterns/Createional/Factory Method";
+import PrototypeSample from "./design-patterns/Createional/Prototype";
+import simpleFactorySample from "./design-patterns/Createional/Simple Factory";
+import SingletonSample from "./design-patterns/Createional/Singleton";
 
 //#region  Creational Patterns
 // simpleFactorySample()

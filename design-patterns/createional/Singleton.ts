@@ -1,4 +1,4 @@
-class President {
+export class President {
   private static instance: President
 
   // Hide the constructor
@@ -11,10 +11,4 @@ class President {
 
     return President.instance
   }
-}
-
-export default function SingletonSample() {
-  let president1 = President.getInstance()
-  let president2 = President.getInstance()
-  console.log(president1 === president2)
 }

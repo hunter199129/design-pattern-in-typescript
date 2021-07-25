@@ -1,0 +1,32 @@
+{
+  "name": "design-pattern-in-typescript",
+  "version": "1.0.0",
+  "description": "Design practice",
+  "main": "index.js",
+  "dependencies": {
+    "ts-node": "^10.1.0",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.2",
+    "install": "^0.13.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.4"
+  },
+  "scripts": {
+    "test": "jest --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunter199129/design-pattern-in-typescript.git"
+  },
+  "author": "Andy Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hunter199129/design-pattern-in-typescript/issues"
+  },
+  "homepage": "https://github.com/hunter199129/design-pattern-in-typescript#readme"
+}

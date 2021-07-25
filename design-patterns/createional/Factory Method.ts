@@ -24,22 +24,14 @@ abstract class HiringManager {
   }
 }
 
-class DevelopmentManager extends HiringManager {
+export class DevelopmentManager extends HiringManager {
   makeInterviewer = () => {
     return new Developer()
   }
 }
 
-class MarketingManager extends HiringManager {
+export class MarketingManager extends HiringManager {
   makeInterviewer = () => {
     return new CommunityExecutive()
   }
-}
-
-export default function factoryMethodSample() {
-  let devManager = new DevelopmentManager()
-  devManager.takeInterview()
-
-  let marketingManger = new MarketingManager()
-  marketingManger.takeInterview()
 }

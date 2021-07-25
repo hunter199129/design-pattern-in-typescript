@@ -1,60 +1,57 @@
-class Burger {
-  _size: number
+export class Burger {
+  protected size: number;
 
-  _cheese = false
-  _pepperoni = false
-  _lettuce = false
-  _tomato = false
+  protected cheese = false;
+  protected pepperoni = false;
+  protected lettuce = false;
+  protected tomato = false;
 
   constructor(builder: BurgerBuilder) {
-    this._size = builder.size
-    this._cheese = builder.cheese
-    this._pepperoni = builder.pepperoni
-    this._lettuce = builder.lettuce
-    this._tomato = builder.tomato
+    this.size = builder.size;
+    this.cheese = builder.cheese;
+    this.pepperoni = builder.pepperoni;
+    this.lettuce = builder.lettuce;
+    this.tomato = builder.tomato;
   }
+  getState = () => ({
+    size: this.size,
+    cheese: this.cheese,
+    pepperoni: this.pepperoni,
+    lettuce: this.lettuce,
+    tomato: this.tomato,
+  });
 }
 
-class BurgerBuilder {
-  size: number
+export class BurgerBuilder {
+  size: number;
 
-  cheese = false
-  pepperoni = false
-  lettuce = false
-  tomato = false
+  cheese = false;
+  pepperoni = false;
+  lettuce = false;
+  tomato = false;
 
   constructor(size: number) {
-    this.size = size
+    this.size = size;
   }
 
   addCheese = () => {
-    this.cheese = true
-    return this
-  }
+    this.cheese = true;
+    return this;
+  };
   addPepperoni = () => {
-    this.pepperoni = true
-    return this
-  }
+    this.pepperoni = true;
+    return this;
+  };
   addLettuce = () => {
-    this.lettuce = true
-    return this
-  }
+    this.lettuce = true;
+    return this;
+  };
   addTomato = () => {
-    this.tomato = true
-    return this
-  }
+    this.tomato = true;
+    return this;
+  };
 
   build = (): Burger => {
-    return new Burger(this)
-  }
-}
-
-export default function BuilderSample() {
-  let burger = new BurgerBuilder(14)
-    .addPepperoni()
-    .addLettuce()
-    .addTomato()
-    .build()
-
-  console.log(burger)
+    return new Burger(this);
+  };
 }
