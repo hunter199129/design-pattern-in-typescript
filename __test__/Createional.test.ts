@@ -7,7 +7,7 @@ import {
   DevelopmentManager,
   MarketingManager,
 } from '../design-patterns/Createional/Factory Method';
-import { Sheep } from '../design-patterns/Createional/Prototype';
+import { cloneSheep, Sheep } from '../design-patterns/Createional/Prototype';
 import { DoorFactory } from '../design-patterns/Createional/Simple Factory';
 import { President } from '../design-patterns/Createional/Singleton';
 
@@ -81,17 +81,14 @@ describe('Factory Method', () => {
 describe('Prototype', () => {
   it('Clone dolly', () => {
     const jolly = new Sheep('Jolly');
-    jolly.getName();
-    expect(jolly.getName()).toBe('Jolly');
-    jolly.getCategory();
-    expect(jolly.getCategory()).toBe('Mountain Sheep');
 
-    const dolly = { ...jolly };
+    const dolly = cloneSheep(jolly);
     dolly.setName('Dolly');
     dolly.setCategory('Cloned Sheep');
-    dolly.getName();
+
+    expect(jolly.getName()).toBe('Jolly');
+    expect(jolly.getCategory()).toBe('Mountain Sheep');
     expect(dolly.getName()).toBe('Dolly');
-    dolly.getCategory();
     expect(dolly.getCategory()).toBe('Cloned Sheep');
 
     expect(dolly).not.toEqual(jolly);

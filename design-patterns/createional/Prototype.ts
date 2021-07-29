@@ -1,19 +1,23 @@
 export class Sheep {
-  protected name: string
-  protected category: string
+  protected name: string;
+  protected category: string;
 
-  constructor(name: string, category: string = "Mountain Sheep") {
-    this.name = name
-    this.category = category
+  constructor(name: string, category: string = 'Mountain Sheep') {
+    this.name = name;
+    this.category = category;
   }
 
-  getName = () => this.name
+  getName = () => this.name;
   setName = (name: string) => {
-    this.name = name
-  }
+    this.name = name;
+  };
 
-  getCategory = () => this.category
+  getCategory = () => this.category;
   setCategory = (category: string) => {
-    this.category = category
-  }
+    this.category = category;
+  };
+}
+
+export function cloneSheep(sheep: Sheep) {
+  return new Sheep(sheep.getName(), sheep.getCategory());
 }
